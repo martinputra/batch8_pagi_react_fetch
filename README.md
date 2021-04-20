@@ -22,7 +22,7 @@ Buka terminal baru dan jalankan syntax ini di terminal.
 
 ```bash
 git clone https://github.com/jemblonganvalley/batch8_pagi_react_fetch.git
-cd bach8_pagi_react_fetch
+cd batch8_pagi_react_fetch
 yarn install
 rm -rf .git
 ```
