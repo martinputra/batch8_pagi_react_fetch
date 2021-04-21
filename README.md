@@ -43,32 +43,40 @@ rm -rf .git
 
 ## Edit file app.js
 
-Okay, yang pertama tama teman2 harus lakukan adalah mengedit file bernama App.js yang ada dalam folder src menjadi **App.jsx**
+Okay, yang pertama harus dilakukan adalah mengedit file bernama App.js yang ada dalam folder src menjadi **App.jsx**
 
 > JSX atau javascript extended adalah sebuah penambahan pada pemograman javascript yang memungkinkan kita bisa insert XML code langsung di dalam sintax javascript.
 
-![https://dev.to](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m2165c0w6zqcvgpsbljb.gif)
+hapus baris pertama 
+```javascript
+import logo from './logo.svg'
+```
 
-**Jangan lupa pada bagian atas code selalu tambahkan :**
+hapus juga content di dalam tag div seperti gambar gif di bawah ini
+
+**Jangan lupa pada bagian atas baris pertama code selalu tambahkan :**
 ```javascript
 import React from 'react'
 ```
+*di gambar gif dibawah ini saya lupa menambahkan*
 
-*di gif saya lupa menambahkan*
+![https://dev.to](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m2165c0w6zqcvgpsbljb.gif)
 
 ## React Hook State 
 State adalah data private sebuah component. Data ini hanya tersedia untuk component tersebut dan tidak bisa di akses dari component lain. Component dapat merubah statenya sendiri.
 [source](https://medium.com/coderupa/react-prop-state-apa-bedanya-7ee61df8257f)
 
-Code state berada di dalam functional atau class component, karena kita tau **JVALLEY** menggunakan functional component, maka kita akan coba meletakan code hook useState pada component app kita.
+Code state berada di dalam functional component atau class component, karena kita tau bahwa di **JVALLEY** kita menggunakan functional component, maka kita akan coba meletakan code hook useState pada component app kita.
 <small>./src/App.jsx</small>
 ![https://dev.to](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0xe13o69hhcvx8s4uisj.gif)
 
-Bisa teman teamn lihat di gif diatas, saya membuat sebuah Hook use state, dengan array literal
+Bisa dilihat pada gif diatas, kita membuat sebuah Hook use state, dengan array literal
+
 ```javascript
 const [data, setData] = React.useState([])
 ```
-ada dua variable yang langsung saya buat didalam array, (array litteral), variable pertama bernama **data** merupakan variable penyimpan data state, dan variable kedua bernama **setData** merupakan sebuah function untuk merubah data pada variable pertama (data). Dan kita langsung mendeklarasikan isi dari state tersebut berupa array kosong.
+
+ada dua variable yang langsung saya buat di dalam array, (array litteral), variable pertama bernama **data** merupakan variable penyimpan data state, dan variable kedua bernama **setData** merupakan sebuah function untuk merubah data pada variable pertama (data). Dan kita langsung mendeklarasikan isi dari state tersebut berupa array kosong.
 
 > Biasanya developer menulis state dengan function dispatch / function pengubah nilai state dengan urutan yang serupa, misal [siswa, setSiswa], [absen, setAbsen], [login, setLogin], dan seterusnya..
 > > Pengisian array kosong pada default value state di gunakan untuk menghindari error saat proses mapping data dari api, karena map hanya bisa berlaku pada tipe data state.
@@ -80,7 +88,7 @@ useEffect merupakan sebuah component life cycle pada react, metode ini untuk men
 
 Silakan check gif diatas, saya membuat sebuah react hook useState, useState method membutuhkan 2 parameter, parameter pertama merupakan callback function dan parameter kedua merupakan array.
 
-- Callback function dalam useState akan berisi perintah2 yang akan di jalankan sebelum component ter Render.
+- Callback function dalam useState akan berisi perintah2 yang akan di jalankan sebelum component di Render.
 - Array pada useState berguna sebagai triger effect. nanti kita akan pelajari lebih lanjut mengenai hal ini, sementara disi sebuah array kosong saja.
 
 *Okay kita lanjut, karena file gif terbatas di 30 second, jadi codenya sedikit2 ya guys..*
