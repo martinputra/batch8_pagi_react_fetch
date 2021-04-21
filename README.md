@@ -1,8 +1,8 @@
-## React Fetching data api
+## React Fetching Data  from API
 
-Okay teman teman kali ini kita akan belajar bagaimana caranya consume data dari api yang sudah pernah kita buat di sesi EXPRESS SQLITE dengan menggunakan REACT.
+Okay teman teman kali ini kita akan belajar bagaimana caranya consume data dari API yang sudah pernah kita buat di sesi sebelumnya EXPRESS SQLITE dengan menggunakan REACT JS library.
 
-Pertama tentunya teman teman harus menjalankan server API di file express-sqlite uyang teman teman miliki.
+Pertama tentunya teman teman harus menjalankan server API di file express-sqlite yang telah dimiliki.
 
 ```bash
 cd express-sqlite
@@ -10,25 +10,36 @@ code .
 npm run dev
 ```
 
-Silakan buka **DBEAVER** dan teman teman bisa lihat di koneksi yang sebelumnya kita lakukan kita mempunyai sebuah table bernama **users** dan memiliki colums id, email, password dan created_at.
+Silakan buka **DBEAVER** dan teman teman bisa lihat pada koneksi yang sebelumnya dibuat kita mempunyai sebuah tabel bernama **users** dan memiliki colums id_user, fullname, username, email, password, telephone, address, batch, dan created_at.
 
 Pastikan server api sudah berjalan di port 8000, silakan test create dan read data users dengan file **test.rest**, apabila semuanya berjalan lancar, baru kita akan mulai code **REACT**
 
 ## Instalasi project React
 
-Untuk mempermudah installasi project ini, silakan teman teman clone repository project ini saja, tanpa menginsatallnya lewat npm, npx atau yarn.
+Pilih salah satu cara di bawah ini untuk instalasi react js library
 
-Buka terminal baru dan jalankan syntax ini di terminal.
+1.  npm install -g create-react app
+    create-react-app batch8_pagi_react_fetch
+
+2.  npx create-react-app batch8_pagi_react_fetch
+
+3.  npm install -g yarn  
+    yarn create react-app batch8_pagi_react_fetch
+
+4.  clone project repository di github tanpa file instalasi melalui npm, npx atau yarn.
+    buka terminal baru dan jalankan syntax ini di terminal.
 
 ```bash
 git clone https://github.com/jemblonganvalley/batch8_pagi_react_fetch.git
 cd batch8_pagi_react_fetch
+npm install -g yarn
 yarn install
 rm -rf .git
 ```
 
-> syntax **yarn install** di jalankan Karena teman teman CLone dari sebuah repository git, teaman teman harus melakukan install environtment package yang tertera pada package.json.
-> Tanpa melakukan ini, react teman tidak akan berjalan.
+> syntax **npm install -g yarn** di jalankan jika perintah yarn belum dikenali akibat package yarn belum tersedia di komputer lokal kita
+> syntax **yarn install** di jalankan karena setelah teman teman melakukan clone dari sebuah repository git, teaman teman harus melakukan install environment package yang tertera pada package.json.
+> Tanpa melakukan hal ini, react teman tidak akan dapat dijalankan.
 
 ## Edit file app.js
 
